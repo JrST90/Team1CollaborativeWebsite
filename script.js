@@ -31,5 +31,5 @@ function displayInfo() {
 
     // Display 
 	
-    document.getElementById("two").innerHTML = output;
+    document.getElementById("two").innerHTML += "<br>" + output;
 }
