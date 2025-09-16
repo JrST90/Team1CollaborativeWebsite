@@ -8,7 +8,7 @@ function displayInfo() {
     
 	// Grabs all inputs with name="userID"
     
-	let inputs = document.getElementsByName("userID");
+	let inputs = document.getElementsByName("userInfo");
 
     // Turn the NodeList into array of values
     
