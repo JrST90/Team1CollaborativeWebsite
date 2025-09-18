@@ -8,7 +8,7 @@ function displayInfo() {
     
 	// Grabs all inputs with name="userID"
     
-	let inputs = document.getElementsByName("userID");
+	let inputs = document.getElementsByName("userInfo");
 
     // Turn the NodeList into array of values
     
@@ -31,5 +31,5 @@ function displayInfo() {
 
     // Display 
 	
-    document.getElementById("two").innerHTML = output;
+    document.getElementById("two").innerHTML += "<br>" + output;
 }
