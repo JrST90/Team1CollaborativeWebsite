@@ -8,15 +8,46 @@ h1
 {
     background-color: #2259da;
     color: #FFFFFF;
-	background-position: right;
-	background-repeat: no-repeat;
-	height: 100px;
+	height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: auto;
 	text-align: center;
-    padding-top: 50px;
-    border: #0477fc;
+    border: #d6e7fb;
     border-style: solid;
     border-radius: 25px;
+}
+nav
+{
+    background-color: #2259da;
+    text-align: center;
+    border-color: #d6e7fb;
+    border-style: solid;
+    border-radius: 10px;
+    width: 40%;
+    padding: 5px;
+    margin: auto;
+    position: relative;
+}
+nav::after
+{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    background-color: #d6e7fb;
+    border-radius: 10px;
+    padding: 2px;
+    translate: -50% -50%;
+    z-index: -1;
+    animation: pulse 3s infinite;
+}
+a
+{
+    padding: 10px;
+    color: white;
 }
 h2
 {
@@ -37,6 +68,7 @@ h2
     text-align: center;
     color: #FFFFFF;
     position:relative;
+    margin-top: 20px;
 }
 #two
 {
@@ -47,6 +79,7 @@ h2
     text-align: center;
     color: #FFFFFF;
     position:relative;
+    margin-top: 20px;
 }
 @property --angle
 {
@@ -114,5 +147,18 @@ h2
     to
     {
         --angle: -360deg;
+    }
+}
+@keyframes pulse
+{
+    0%
+    {
+        box-shadow: 0 0 0 0 #d6e7fb;
+        opacity: 1;
+    }
+    100%
+    {
+        box-shadow: 0 0 0 10px #d6e7fb;
+        opacity: 0;
     }
 }
