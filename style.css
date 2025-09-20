@@ -127,6 +127,18 @@ h2
     filter: blur(1.5rem);
     opacity: 0.5;
 }
+.submission-card 
+{
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;     
+	border: 2px solid red; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+.submission-card p 
+{
+    margin: 5px 0;
+}
 @keyframes spinOne
 {
     from
@@ -162,3 +174,4 @@ h2
         opacity: 0;
     }
 }
+
