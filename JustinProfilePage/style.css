@@ -1,0 +1,169 @@
+body
+{
+	background-color: #17232e;
+	color: #b8b7b7; 
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1
+{
+    background-color: #2259da;
+    color: #FFFFFF;
+	height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+	text-align: center;
+    border: #d6e7fb;
+    border-style: solid;
+    border-radius: 25px;
+}
+nav
+{
+    background-color: #2259da;
+    text-align: center;
+    border-color: #d6e7fb;
+    border-style: solid;
+    border-radius: 10px;
+    width: 40%;
+    padding: 5px;
+    margin: auto;
+    position: relative;
+}
+nav::after
+{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    background-color: #d6e7fb;
+    border-radius: 10px;
+    padding: 2px;
+    translate: -50% -50%;
+    z-index: -1;
+    animation: pulse 3s infinite;
+}
+a
+{
+    padding: 10px;
+    color: white;
+}
+h2
+{
+    color:#FFFFFF;
+    text-align: center;
+}
+#container
+{
+    display: flex;
+    justify-content: space-around;
+}
+#one
+{
+    background-color: #2259da;
+	width: 40%;
+    border-radius: 25px;
+    padding:10px;
+    text-align: center;
+    color: #FFFFFF;
+    position:relative;
+    margin-top: 20px;
+}
+#two
+{
+    background-color: #2259da;
+	width: 40%;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+    color: #FFFFFF;
+    position:relative;
+    margin-top: 20px;
+}
+@property --angle
+{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+#one::after, #one::before
+{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 4px;
+    border-radius: 25px;
+    animation: 3s spinOne linear infinite;
+}
+#one::before
+{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+#two::after, #two::before
+{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #ff0095, #006aff, #00ff99, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 4px;
+    border-radius: 25px;
+    animation: 3s spinTwo linear infinite;
+}
+#two::before
+{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+#image1, #image2
+ {
+    width: 200px;   
+    height: 150px;      
+ }
+@keyframes spinOne
+{
+    from
+    {
+        --angle: 0deg;
+    }
+    to
+    {
+        --angle: 360deg;
+    }
+}
+@keyframes spinTwo
+{
+    from
+    {
+        --angle: 0deg;
+    }
+    to
+    {
+        --angle: -360deg;
+    }
+}
+@keyframes pulse
+{
+    0%
+    {
+        box-shadow: 0 0 0 0 #d6e7fb;
+        opacity: 1;
+    }
+    100%
+    {
+        box-shadow: 0 0 0 10px #d6e7fb;
+        opacity: 0;
+    }
+}
